@@ -10,7 +10,9 @@ import embedRoutes from "./routes/embedRoutes.js";
 
 import Embed from "./models/embed.js";
 
-sequelize.sync({ force: true });
+// When set to true the existing database will be dropped on startup
+
+sequelize.sync({ force: false });
 
 const app = express();
 
@@ -32,9 +34,9 @@ app.get("/e/:shortKey", async (req, res) => {
 
         console.log("Found embed", embed);
 
-        let { title, image, redirect, description, siteName } = embed.dataValues;
+        let { title, image, redirect, description, siteName, color } = embed.dataValues;
 
-        res.render("pages/embed", { title, image, redirect, description, siteName });
+        res.render("pages/embed", { title, image, redirect, description, siteName, color });
 
       } else {
 
@@ -50,6 +52,6 @@ app.get("/e/:shortKey", async (req, res) => {
 
 app.use(express.static("public"));
 
-app.listen(3232);
+app.listen(process.env.PORT);
 
-console.log("Running on localhost:3232");
+console.log("Running on localhost:", process.env.PORT);

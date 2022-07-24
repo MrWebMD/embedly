@@ -35,6 +35,11 @@ body {
   border-bottom: 1px solid white;
   padding: 0.5rem;
   color: white;
+  height: 1.7rem;
+}
+.form__input--colorPicker {
+  height: 4rem;
+  width: 4rem;
 }
 .form__input:focus {
   outline: none;

@@ -19,14 +19,15 @@ const main = () => {
 const embedFormSubmitHandler = (event) => {
   event.preventDefault();
 
-  let { description, image, title, redirect, siteName } = event.target.elements;
+  let { description, image, title, redirect, siteName, color } = event.target.elements;
 
   let embedData = {
     description: description.value,
     image: image.value,
     title: title.value,
     redirect: redirect.value,
-    siteName: siteName.value
+    siteName: siteName.value,
+    color: color.value,
   };
 
   slideController.next();
@@ -39,7 +40,7 @@ const embedFormSubmitHandler = (event) => {
       if(res.status !== 200) {
         resultEmbedLinkNode.nodeValue = res.message;
       } else {
-        let embedLink = `http://${location.hostname}/e/${res.shortKey}`
+        let embedLink = `http://${location.host}/e/${res.shortKey}`
         resultEmbedLinkNode.nodeValue = `Here's your embed link: ${embedLink}`
       }
       slideController.next();

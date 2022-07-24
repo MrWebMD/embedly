@@ -6,6 +6,7 @@ export const saveEmbed = async (req, res) => {
     title: req.body.title,
     image: req.body.image,
     description: req.body.description,
+    color: req.body.color,
     redirect: req.body.redirect,
     siteName: req.body.siteName,
     shortKey: nanoid(10)

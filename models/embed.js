@@ -18,6 +18,10 @@ Embed.init(
       type: DataTypes.STRING(50),
       allowNull: false,
     },
+    color: {
+      type: DataTypes.STRING(25),
+      allowNull: false,
+    },
     siteName: {
       type: DataTypes.STRING(50),
       allowNull: false,
