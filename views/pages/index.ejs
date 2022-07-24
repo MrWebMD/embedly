@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/slideController.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="Embedly" property="og:title" />
+  <meta content="http://embedly.mrwebmd.com" property="og:url" />
+  <meta content="http://embedly.mrwebmd.com/images/index.gif" property="og:image" />
+  <meta content="#000000" name="theme-color" />
+  <meta property="og:site_name" content="Embedly by Dom" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+
+<body>
+  <nav>
+    <div class="slideController slideController--container">
+      <div class="slideController__indicator slideController__indicator--active"></div>
+      <div class="slideController__indicator"></div>
+      <div class="slideController__indicator"></div>
+    </div>
+  </nav>
+  <header>
+    <h1 class="heading heading--large">Embedly</h1>
+  </header>
+  <main class="slideContainer">
+    <section class="slideContainer__slide slideContainer__slide--active section">
+      <form name="embedForm" class="form">
+        <h2 class="heading heading--light">Create an embed</h2>
+        <div class="form__field">
+          <label for="title" class="form__label">Site Name</label>
+          <input placeholder="Site Name" name="siteName" class="form__input" />
+        </div>
+
+        <div class="form__field">
+          <label for="title" class="form__label">Title</label>
+          <input placeholder="Title" name="title" class="form__input" />
+        </div>
+
+        <div class="form__field">
+          <label for="image" class="form__label">Image URL</label>
+          <input placeholder="https://i.imgur.com/kkE25w2.jpeg" type="url" name="image" class="form__input" />
+        </div>
+        <div class="form__field">
+          <label for="image" class="form__label">Redirect URL</label>
+          <input placeholder="Redirect URL" type="https://www.youtube.com" name="redirect" class="form__input" />
+        </div>
+
+        <div class="form__field">
+          <label for="description" class="form__label">Description</label>
+          <input placeholder="A cool embed" name="description" class="form__input" />
+        </div>
+
+        <div>
+          <button class="button button--blue">Create</button>
+        </div>
+
+      </form>
+    </section>
+    <section class="slideContainer__slide section">
+      <div class="dots">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+    <section class="slideContainer__slide section">
+      <h2 class="heading heading--light embedLink"></h2>
+      <button class="button button--blue" onClick="slideController.changeActiveSlide(0)">Go Back</button>
+    </section>
+  </main>
+  <script src="./js/slideController.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+.slideController {
+  width:100%;
+  display:flex;
+  flex-direction: row;
+}
+.slideController__indicator {
+  margin:0.2rem;
+  height: 0.2rem;
+  width:100%;
+  background-color:#3cbbff;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out 0s;
+}
+.slideController__indicator:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.slideController__indicator--active {
+  opacity: 1;
+}
+.slideContainer {
+  position: relative;
+}
+.slideContainer__slide {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out 0s;
+}
+.slideContainer__slide--active {
+  opacity: 1;
+}
