@@ -17,6 +17,7 @@ Embedly requires that a file named `.env` exists in the root directory of the pr
 DB_USER=production
 DB_PASS=YOURDBPASSWORD
 NODE_ENV=production
+PORT=3002
 ```
 Once you've saved this, your environment is all set up!
 
